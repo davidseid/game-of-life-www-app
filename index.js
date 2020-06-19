@@ -1,11 +1,11 @@
 import { Universe, Cell } from "wasm-game-of-life";
-import { memory } from "wasm-game-of-life/wasm_game_of_life_bg";
+import { memory } from "wasm-game-of-life/wasm_game_of_life_davidseid_bg";
 
 
 const CELL_SIZE = 5; // px
 const GRID_COLOR = "#CCCCCC";
-const DEAD_COLOR = "#FFFFFF";
-const ALIVE_COLOR = "#000000";
+const DEAD_COLOR = "#C0E8D5";
+const ALIVE_COLOR = "#FF9966";
 
 // Construct the universe, and get its width and height.
 const universe = Universe.new();
