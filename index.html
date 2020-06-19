@@ -23,7 +23,14 @@
   </head>
   <body>
     <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
-    <button id="play-pause"></button>
+    <h3>Rust & WASM "Game of Life"</h3>
+    <div>
+      <input id="tick-speed" type="range" min="1" max="10" name="tick-speed" value="1">
+      <label for="tick-speed">Ticks Per Animation Frame (1 - 10)</label>
+    </div>
+    <div>
+      <button id="play-pause"></button>
+    </div>
     <div id="fps"></div>
     <canvas id="game-of-life-canvas"></canvas>
     <script src="./bootstrap.js"></script>

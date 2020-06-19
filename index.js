@@ -112,7 +112,12 @@ let animationId = null;
 const renderLoop = () => {
     debugger;
     fps.render();
-    universe.tick();
+
+    const speed = document.getElementById("tick-speed").value;
+
+    for (let i = 0; i < speed / 2; i++) {
+        universe.tick();
+    }
   
     drawGrid();
     drawCells();
