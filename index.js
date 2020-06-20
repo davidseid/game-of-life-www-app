@@ -1,11 +1,20 @@
 import { Universe, Cell } from "wasm-game-of-life";
 import { memory } from "wasm-game-of-life/wasm_game_of_life_davidseid_bg";
 
-
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 const CELL_SIZE = 5; // px
 const GRID_COLOR = "#CCCCCC";
-const DEAD_COLOR = "#C0E8D5";
-const ALIVE_COLOR = "#FF9966";
+// const DEAD_COLOR = "#C0E8D5";
+// const ALIVE_COLOR = "#FF9966";
+const DEAD_COLOR = getRandomColor();
+const ALIVE_COLOR = getRandomColor();
 
 // Construct the universe, and get its width and height.
 const universe = Universe.new();
@@ -149,6 +158,16 @@ playPauseButton.addEventListener("click", event => {
     pause();
   }
 });
+
+const restartButton = document.getElementById('restart');
+restartButton.addEventListener('click', event => {
+    universe.restart();
+});
+
+const clearButton = document.getElementById('clear');
+clearButton.addEventListener('click', event => {
+    universe.clear();
+})
 
 const fps = new class {
     constructor() {
