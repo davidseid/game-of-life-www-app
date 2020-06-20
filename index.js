@@ -171,6 +171,11 @@ restartButton.addEventListener('click', event => {
     universe.restart();
 });
 
+const randomizeButton = document.getElementById('randomize');
+randomizeButton.addEventListener('click', event => {
+    universe.randomize();
+});
+
 const clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', event => {
     universe.clear();

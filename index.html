@@ -20,6 +20,11 @@
         font-family: monospace;
       }
 
+      #randomize {
+        white-space: pre;
+        font-family: monospace;
+      }
+
       #restart {
         white-space: pre;
         font-family: monospace;
@@ -37,8 +42,8 @@
     <p>Tutorial here: </p>
     <a href="https://rustwasm.github.io/docs/book/game-of-life/introduction.html">https://rustwasm.github.io/docs/book/game-of-life/introduction.html</a>
     <div>
-      <input id="tick-speed" type="range" min="1" max="10" name="tick-speed" value="1">
-      <label for="tick-speed">Ticks Per Animation Frame (1 - 10)</label>
+      <input id="tick-speed" type="range" min="1" max="100" name="tick-speed" value="1">
+      <label for="tick-speed">Ticks Per Animation Frame (1 - 100)</label>
     </div>
     <div>
       <button id="play-pause"></button>
@@ -48,6 +53,8 @@
     <div>
       <button id="restart"></button>
       <label for="restart">Restart</label>
+      <button id="randomize"></button>
+      <label for="randomize">Randomize</label>
       <button id="clear"></button>
       <label for="clear">Clear</label>
     </div>
